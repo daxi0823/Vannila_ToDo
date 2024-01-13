@@ -17,8 +17,18 @@ const onClickAdd = () => {
   p.className = "todo-item";
   p.innerText = inputText;
 
+  // 完了ボタン生成
+  const completeButton = document.createElement("button");
+  completeButton.innerText = "完了";
+
+  // 削除ボタン生成
+  const deleteButton = document.createElement("button");
+  deleteButton.innerText = "削除";
+
   // liタグの子要素に各要素を設定
   div.appendChild(p);
+  div.appendChild(completeButton);
+  div.appendChild(deleteButton);
   li.appendChild(div);
 
   document.getElementById("incomplete-list").appendChild(li);
